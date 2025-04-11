@@ -1,0 +1,60 @@
+<odoo>
+    <data>
+       <record id="view_purchase_order_form_inherit_vendor_filter" model="ir.ui.view">
+        <field name="name">purchase.order.form.inherit.vendor_filter</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group" position="inside">
+                <field name="vendor_filter"/>
+            </xpath>
+        </field>
+    </record>
+<!--  <record id="purchase_order_line_view_inherit_vendor_filter" model="ir.ui.view">-->
+<!--            <field name="name">purchase.order.line.vendor.filter</field>-->
+<!--            <field name="model">purchase.order.line</field>-->
+<!--            <field name="inherit_id" ref="purchase.purchase_order_line_tree"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                &lt;!&ndash; Add product_id field after partner_id &ndash;&gt;-->
+<!--                <xpath expr="//field[@name='partner_id']" position="after">-->
+<!--                    <field name="product_id" widget="many2many_tags" readonly="1"/>-->
+<!--                </xpath>-->
+<!--                &lt;!&ndash; Add domain filter to product_id field &ndash;&gt;-->
+<!--                <xpath expr="//field[@name='product_id']" position="attributes">-->
+<!--                    <attribute name="domain">[('seller_ids.partner_id', '=', parent.partner_id)]</attribute>-->
+<!--                </xpath>-->
+<!--            </field>-->
+<!--        </record>-->
+
+
+<!--       <record id="purchase_order_line_tree_inherit_list_price" model="ir.ui.view">-->
+<!--    <field name="name">purchase.order.line.tree.inherit.list.price</field>-->
+<!--    <field name="model">purchase.order.line</field>-->
+<!--    <field name="inherit_id" ref="purchase.purchase_order_line_tree"/>-->
+<!--    <field name="arch" type="xml">-->
+<!--        &lt;!&ndash; Add after price_unit field &ndash;&gt;-->
+<!--        <xpath expr="//field[@name='price_unit']" position="after">-->
+<!--            <field name="product_list_price" string="List Price"/>-->
+<!--        </xpath>-->
+<!--    </field>-->
+<!--</record>-->
+
+
+        <!--        &lt;!&ndash; Extend the Purchase Order Form View &ndash;&gt;-->
+        <!--        <record id="view_purchase_order_form" model="ir.ui.view">-->
+        <!--            <field name="name">purchase.order.form.inherit</field>-->
+        <!--            <field name="model">purchase.order</field>-->
+        <!--            <field name="inherit_id" ref="purchase.purchase_order_form"/>-->
+        <!--            <field name="arch" type="xml">-->
+        <!--                <xpath expr="//field[@name='partner_id']" position="after">-->
+        <!--                    <field name="vendor_filter"/>-->
+        <!--&lt;!&ndash;                    <field name="vendor_product_ids" widget="many2many_tags" readonly="1"/>&ndash;&gt;-->
+        <!--                </xpath>-->
+        <!--            </field>-->
+        <!--        </record>-->
+
+
+
+
+ </data>
+</odoo>
